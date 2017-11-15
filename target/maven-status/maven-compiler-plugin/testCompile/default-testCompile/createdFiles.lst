@@ -1,0 +1,12 @@
+com/sammy/project/schedule/web/rest/AuditResourceIntTest.class
+com/sammy/project/schedule/web/rest/TestUtil.class
+com/sammy/project/schedule/web/rest/TimeResourceIntTest.class
+com/sammy/project/schedule/web/rest/UserResourceIntTest.class
+com/sammy/project/schedule/web/rest/DayTimeResourceIntTest.class
+com/sammy/project/schedule/web/rest/SessionResourceIntTest.class
+com/sammy/project/schedule/web/rest/LecturerResourceIntTest.class
+com/sammy/project/schedule/web/rest/CourseResourceIntTest.class
+com/sammy/project/schedule/security/SecurityUtilsUnitTest.class
+com/sammy/project/schedule/service/UserServiceIntTest.class
+com/sammy/project/schedule/web/rest/AccountResourceIntTest.class
+com/sammy/project/schedule/web/rest/ScheduleResourceIntTest.class

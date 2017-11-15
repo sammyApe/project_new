@@ -1,0 +1,58 @@
+
+entity Lecturer {
+	name String required,
+    semester SemesterEnum
+}
+
+entity Course {
+	name String,
+	code String,
+    semester SemesterEnum
+}
+entity Session{
+	name String
+}
+
+entity DayTime{
+    dayPreference Day
+}
+
+entity Time{
+    timePreference TimePreference,
+}
+
+entity Schedule{
+	date LocalDate,
+    name String
+}
+
+
+enum TimePreference {
+    MORNINGS, MORNINGS_AND_AFTERNOONS, MORNINGS_AND_EVENINGS,
+    AFTERNOONS, AFTERNOONS_AND_EVENINGS, EVENINGS
+}
+
+enum Day {
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+}
+
+enum SemesterEnum {
+    SPRING, SUMMER, FALL
+}
+
+relationship OneToMany {
+	Lecturer{courseList} to Course,
+
+    Lecturer{preferredDayTimeList} to DayTime,
+
+    Schedule{LecturerList} to Lecturer,
+
+    Session{LecturerList} to Lecturer,
+
+    DayTime{timePreferenceList} to Time
+}
+
+// Set service options to all except few
+service all with serviceImpl except SemesterEnum, TimePreference,
+Day, DayTime
+

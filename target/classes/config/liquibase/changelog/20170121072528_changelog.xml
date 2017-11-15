@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+   <changeSet author="samuel (generated)" id="1484983536026-1">
+      <createTable tableName="course_section">
+         <column name="course_id" type="BIGINT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="section_id" type="BIGINT">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="samuel (generated)" id="1484983536026-2">
+      <createTable tableName="lecturer_course">
+         <column name="course_id" type="BIGINT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="lecturer_id" type="BIGINT">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="samuel (generated)" id="1484983536026-3">
+      <addPrimaryKey columnNames="section_id, course_id" tableName="course_section"/>
+   </changeSet>
+   <changeSet author="samuel (generated)" id="1484983536026-4">
+      <addPrimaryKey columnNames="lecturer_id, course_id" tableName="lecturer_course"/>
+   </changeSet>
+   <changeSet author="samuel (generated)" id="1484983536026-5">
+      <addForeignKeyConstraint baseColumnNames="course_id"
+                               baseTableName="course_section"
+                               constraintName="FK_5ih3l7cf918xd98odtk5shrmw"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="course"/>
+   </changeSet>
+   <changeSet author="samuel (generated)" id="1484983536026-6">
+      <addForeignKeyConstraint baseColumnNames="course_id"
+                               baseTableName="lecturer_course"
+                               constraintName="FK_abxn8m01hh44wcw0deq29p08w"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="course"/>
+   </changeSet>
+   <changeSet author="samuel (generated)" id="1484983536026-7">
+      <addForeignKeyConstraint baseColumnNames="lecturer_id"
+                               baseTableName="lecturer_course"
+                               constraintName="FK_kjpaowcwh2sfaxx9h52a4s1g5"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="lecturer"/>
+   </changeSet>
+   <changeSet author="samuel (generated)" id="1484983536026-8">
+      <addForeignKeyConstraint baseColumnNames="section_id"
+                               baseTableName="course_section"
+                               constraintName="FK_ri1sn8pl2t6jy263qspsnro7n"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="session"/>
+   </changeSet>
+   <changeSet author="samuel (generated)" id="1484983536026-9">
+      <dropForeignKeyConstraint baseTableName="LECTURER" constraintName="FK_M4LNXDQ0H9JEBDT582VC1QV1N"/>
+   </changeSet>
+   <changeSet author="samuel (generated)" id="1484983536026-10">
+      <dropForeignKeyConstraint baseTableName="COURSE" constraintName="FK_QJYFM5IDWAS5D0FD0AWWK6AAA"/>
+   </changeSet>
+   <changeSet author="samuel (generated)" id="1484983536026-11">
+      <dropColumn columnName="LECTURER_ID" tableName="COURSE"/>
+   </changeSet>
+   <changeSet author="samuel (generated)" id="1484983536026-12">
+      <dropColumn columnName="SESSION_ID" tableName="LECTURER"/>
+   </changeSet>
+   <changeSet author="samuel (generated)" id="1484983536026-13">
+      <dropDefaultValue columnDataType="timestamp"
+                        columnName="created_date"
+                        tableName="jhi_user"/>
+   </changeSet>
+</databaseChangeLog>

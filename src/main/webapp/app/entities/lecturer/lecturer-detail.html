@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span>Lecturer</span> {{vm.lecturer.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Name</span></dt>
+        <dd>
+            <span>{{vm.lecturer.name}}</span>
+        </dd>
+        <dt><span>Teaching Load</span></dt>
+        <dd>
+            <span>{{vm.lecturer.teachingLoad}}</span>
+        </dd>
+        <dt><span>Semester</span></dt>
+        <dd>
+            <span>{{vm.lecturer.semester}}</span>
+        </dd>
+        <dt><span>Course List</span></dt>
+        <dd>
+            <span ng-repeat="course in vm.lecturer.courseLists">
+                <a ui-sref="course-detail({id: course.id})">{{course.name}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span>Session List</span></dt>
+        <dd>
+            <span ng-repeat="session in vm.lecturer.course.sectionLists">
+                <a ui-sref="session-detail({id: session.id})">{{session.name}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="lecturer-detail.edit({id:vm.lecturer.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

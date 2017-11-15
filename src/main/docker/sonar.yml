@@ -1,0 +1,8 @@
+version: '2'
+services:
+    scheduling_project-sonar:
+        container_name: scheduling_project-sonar
+        image: sonarqube:6.1-alpine
+        ports:
+            - 9000:9000
+            - 9092:9092

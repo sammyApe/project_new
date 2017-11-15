@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity DayTime.
+    -->
+    <changeSet id="20161127031310-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="lecturer_id"
+                                 baseTableName="day_time"
+                                 constraintName="fk_day_time_lecturer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="lecturer"/>
+
+    </changeSet>
+</databaseChangeLog>

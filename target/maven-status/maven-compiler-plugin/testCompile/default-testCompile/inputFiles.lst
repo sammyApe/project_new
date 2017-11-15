@@ -1,0 +1,13 @@
+/Users/samuel/jhipster2/src/test/java/com/sammy/project/schedule/web/rest/LecturerResourceIntTest.java
+/Users/samuel/jhipster2/src/test/java/com/sammy/project/schedule/web/rest/ScheduleResourceIntTest.java
+/Users/samuel/jhipster2/src/test/java/com/sammy/project/schedule/service/UserServiceIntTest.java
+/Users/samuel/jhipster2/src/test/java/com/sammy/project/schedule/web/rest/TestUtil.java
+/Users/samuel/jhipster2/src/test/java/com/sammy/project/schedule/web/rest/TimeResourceIntTest.java
+/Users/samuel/jhipster2/src/test/java/com/sammy/project/schedule/web/rest/SessionResourceIntTest.java
+/Users/samuel/jhipster2/src/test/java/com/sammy/project/schedule/web/rest/AuditResourceIntTest.java
+/Users/samuel/jhipster2/src/test/java/com/sammy/project/schedule/web/rest/UserResourceIntTest.java
+/Users/samuel/jhipster2/src/test/java/com/sammy/project/schedule/web/rest/DayTimeResourceIntTest.java
+/Users/samuel/jhipster2/src/test/java/com/sammy/project/schedule/web/rest/CourseResourceIntTest.java
+/Users/samuel/jhipster2/src/test/java/com/sammy/project/schedule/web/rest/AccountResourceIntTest.java
+/Users/samuel/jhipster2/src/test/java/com/sammy/project/schedule/security/SecurityUtilsUnitTest.java
+/Users/samuel/jhipster2/src/test/java/com/sammy/project/schedule/repository/LecturerRepositoryTest.java

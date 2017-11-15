@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Lecturer.
+    -->
+    <changeSet id="20161127031307-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="lecturers_id"
+                                 baseTableName="lecturer_course_list"
+                                 constraintName="fk_lecturer_course_list_lecturers_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="lecturer"/>
+        <addForeignKeyConstraint baseColumnNames="course_lists_id"
+                                 baseTableName="lecturer_course_list"
+                                 constraintName="fk_lecturer_course_list_course_lists_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="course"/>
+        
+        <addForeignKeyConstraint baseColumnNames="lecturers_id"
+                                 baseTableName="lecturer_session_list"
+                                 constraintName="fk_lecturer_session_list_lecturers_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="lecturer"/>
+        <addForeignKeyConstraint baseColumnNames="session_lists_id"
+                                 baseTableName="lecturer_session_list"
+                                 constraintName="fk_lecturer_session_list_session_lists_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="session"/>
+        
+    </changeSet>
+</databaseChangeLog>
